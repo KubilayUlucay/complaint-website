@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sana Özel Tatlı Mesajlar!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="background-hearts-container"></div>
+
+    <div class="container">
+        <header>
+            <h1>💌 Sana Özel Bir Mesaj Var 💌</h1>
+            <p class="subtitle">Beni düşündüğünde ya da canın sıkıldığında...</p>
+        </header>
+
+        <main>
+            <section class="love-meter-section">
+                <h2>Aşk Metremiz <span id="loveMeterEmoji">💖</span></h2>
+                <div class="love-meter-bar-container">
+                    <div id="loveMeterBarFill" class="love-meter-bar-fill"></div>
+                </div>
+                <p id="loveMeterStatus">Aşk akmaya devam etsin!</p>
+                <p id="lovePointsDisplay">Aşk Puanı: 0</p>
+            </section>
+
+            <section class="ticket-form-section">
+                <h2>Minik Bir Not Gönder:</h2>
+                <form id="ticketForm" action="https://formspree.io/f/meogdwzp" method="POST">
+                    <div class="form-group">
+                        <label for="ticketType">Not Türü:</label>
+                        <select id="ticketType" name="ticketType">
+                            <option value="💌 Aşk Mesajı">💌 Aşk Mesajı</option>
+                            <option value="❗ Şikayet (tatlış olanından)">❗ Şikayet (tatlış olanından)</option>
+                            <option value="🤔 Neredesin?">🤔 Neredesin?</option>
+                            <option value="👀 Bana Bak!">👀 Bana Bak!</option>
+                            <option value="💡 Parlak Fikir!">💡 Parlak Fikir!</option>
+                            <option value="😂 Komik Düşünce">😂 Komik Düşünce</option>
+                            <option value="🗓️ Randevu Fikri">🗓️ Randevu Fikri</option>
+                            <option value="🥱 Canım Sıkılıyor">🥱 Canım Sıkılıyor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticketTitle">Aklında ne var? (Örn: Seni özledim!)</label>
+                        <input type="text" id="ticketTitle" name="ticketTitle" placeholder="Kısa bir düşünce..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticketMessage">Detay var mı? (isteğe bağlı)</label>
+                        <textarea id="ticketMessage" name="ticketMessage" rows="3" placeholder="Daha fazla anlat..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticketMood">Şu anki Ruh Hali (notla ilgili):</label>
+                        <select id="ticketMood" name="ticketMood">
+                            <option value="😊 Mutlu">😊 Mutlu</option>
+                            <option value="🥰 Sevgi Dolu">🥰 Sevgi Dolu</option>
+                            <option value="🥺 Özledim">🥺 Özledim</option>
+                            <option value="🤔 Düşünceli">🤔 Düşünceli</option>
+                            <option value="🎉 Heyecanlı">🎉 Heyecanlı</option>
+                            <option value="😠 Huysuz (ama hala seni seviyorum)">😠 Huysuz (ama hala seni seviyorum)</option>
+                            <option value="😂 Gülüyorum">😂 Gülüyorum</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitTicketBtn">
+                        Aşkımı Gönder!
+                    </button>
+                </form>
+            </section>
+
+            <div id="loadingAnimation" class="loading-overlay" style="display: none;">
+                <div class="loading-content">
+                    <img src="" alt="Gönderiliyor..." id="loadingImage">
+                    <p id="loadingMessageText">Kıymetli notun ulaştırılıyor...</p>
+                </div>
+            </div>
+
+            <section class="tickets-display-section">
+                <h2>Gönderdiğin Notlar:</h2>
+                <div id="ticketsContainer" class="tickets-grid">
+                    <!-- Biletler dinamik olarak buraya eklenecek -->
+                </div>
+                <p id="noTicketsMessage" class="no-tickets">Henüz hiç not göndermedin. Hadi bir tane gönder!</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>❤️ ile Kubi tarafından harika kız arkadaşım için yapıldı!</p>
+            <button id="surpriseBtn">✨ Sürpriz İçin Tıkla! ✨</button>
+        </footer>
+    </div>
+
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <p id="surpriseMessage">Placeholder Sürpriz Mesajı</p>
+            <img id="surpriseImage" src="" alt="Sevimli Sürpriz" style="display:none; max-width: 80%; border-radius: 10px; margin-top: 15px;">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
