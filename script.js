@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lovePoints = 0;
     const MAX_LOVE_POINTS = 1000;
     const loveMeterMilestones = [
-        { points: 0, status: "Aşk hikayemiz daha yeni başlıyor... 🥰", emoji: "💖" },
+        { points: 0, status: "Bana her yazdığında doluyor!!! 🥰", emoji: "💖" },
         { points: 50, status: "Her not kalbimi kelebeklendiriyor! 🦋", emoji: "💕" },
         { points: 100, status: "Kocaman bir aşk dağı inşa ediyoruz! ⛰️❤️", emoji: "💞" },
         { points: 200, status: "Aşkımız bir elmas gibi parlıyor! 💎", emoji: "💓" },
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initializePage() {
         console.log("Sayfa başlatılıyor...");
-        if (noTicketsMessage) noTicketsMessage.textContent = "Henüz hiç not göndermedin. Hadi bir tane gönder!"; // Set initial text from JS
+        if (noTicketsMessage) noTicketsMessage.textContent = "Henüz hiç not göndermedin :((((("; // Set initial text from JS
         if (loadingMessageText) loadingMessageText.textContent = TXT_LOADING_MESSAGE;
 
         if (ticketForm && ticketsContainer && noTicketsMessage) loadTickets();
